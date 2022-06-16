@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,26 +22,31 @@
     <div class="container">
         <div class="weather">
       <div class="row text">
+        
         <div class="col-2">
           <img src="./img/sunny2.png" alt="sunny" />
         </div>
+        
         <div class="col-5">
           <ul>
             <li><h1>Kyiv</h1></li>
-            <li id="currently-data">Thursday, 19:27</li>
+            <li id="currently-data"></li>
 
             <li><span id="temp">23</span> C° | F°</li>
-            <li>Clear sky</li></div>
+            <li id="status">Clear sky</li></div>
 
             <div class="col-5">
               <ul class="right-col">
-                <li>Humidity: 45</li>
-                <li>Wind: 67 km/h</li>
+                <li id="hum"></li>
+                <li id="wind"></li>
               </ul>
             </div>
           </ul>
         
       </div>
     </div></div>
+
+<script src="src/src.js"></script>
+
   </body>
 </html>
