@@ -26,17 +26,13 @@ li {
   margin: 0;
   padding: 0;
   line-height: 20px;
+  font-family: "Roboto Flex", sans-serif;
 }
 
 h1 {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
-}
-
-p {
-  margin: 0;
-  font-family: "Roboto Flex", sans-serif;
 }
 
 #currently-data {
