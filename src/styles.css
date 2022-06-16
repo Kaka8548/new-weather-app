@@ -46,6 +46,19 @@ h1 {
   margin-right: 10px;
 }
 
+.active {
+  text-decoration: none;
+  color: #063462;
+}
+
+.active:hover {
+  cursor: default;
+}
+
+#status::first-letter {
+  text-transform: uppercase;
+}
+
 .right-col {
   position: absolute;
   bottom: 0;
