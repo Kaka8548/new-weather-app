@@ -11,25 +11,28 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto+Flex:opsz,wght@8..144,200;8..144,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
         <div class="weather">
-      <div class="row">
+      <div class="row text">
         <div class="col-2">
           <img src="./img/sunny2.png" alt="sunny" />
         </div>
         <div class="col-5">
           <ul>
             <li><h1>Kyiv</h1></li>
-            <li><p>Thursday, 19:27</p></li>
+            <li id="currently-data">Thursday, 19:27</li>
 
-            <li>23 C° | F°</li>
+            <li><span id="temp">23</span> C° | F°</li>
             <li>Clear sky</li></div>
 
             <div class="col-5">
-              <ul>
+              <ul class="right-col">
                 <li>Humidity: 45</li>
                 <li>Wind: 67 km/h</li>
               </ul>
