@@ -44,6 +44,7 @@ function showCurrentWeather(response) {
 
   let currentCity = document.querySelector("#city");
   currentCity.innerHTML = city;
+  currentCity.classList.remove("small");
   let currentData = document.querySelector("#currently-data");
   currentData.innerHTML = `${day}, ${hours}:${minutes}`;
   let temp = document.querySelector("#temp");
