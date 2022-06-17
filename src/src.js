@@ -34,7 +34,7 @@ function showCurrentWeather(response) {
   let humidity = response.data.main.humidity;
   let windSpeed = response.data.wind.speed;
   let city = response.data.name;
-  console.log(city);
+  let iconId = response.data.weather[0].icon;
 
   if (hours < 10) {
     hours = `0${hours}`;
@@ -55,6 +55,11 @@ function showCurrentWeather(response) {
   hum.innerHTML = `Humidity: ${humidity}%`;
   let wind = document.querySelector("#wind");
   wind.innerHTML = `Wind: ${windSpeed} km/h`;
+  let weatherIcon = document.querySelector("#icon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${iconId}@2x.png`
+  );
 }
 
 function showFahTemp(event) {
