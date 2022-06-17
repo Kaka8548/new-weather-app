@@ -15,7 +15,6 @@ function handleSubmit(event) {
 }
 
 function showCurrentWeather(response) {
-  console.log(response.data);
   weekDays = [
     "Sunday",
     "Monday",
