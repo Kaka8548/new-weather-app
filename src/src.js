@@ -1,15 +1,18 @@
-let city = `Kyiv`;
-let apiKey = `e6243f25d4521c7113d909e1adc20730`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function handleSubmit(event) {
+  event.preventDefault();
+  let inputCity = document.querySelector("#input-city");
+  if (inputCity.value) {
+    let city = inputCity.value;
+    let apiKey = `e6243f25d4521c7113d909e1adc20730`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(showCurrentWeather);
-
-let f = document.querySelector("#fah-temp");
-let c = document.querySelector("#cels-temp");
-f.addEventListener("click", showFahTemp);
-c.addEventListener("click", showCelsTemp);
-
-let celsiusTemperature = null;
+    axios.get(apiUrl).then(showCurrentWeather);
+  } else {
+    let currentCity = document.querySelector("#city");
+    currentCity.classList.add("small");
+    currentCity.innerHTML = `You haven't typed anything yet 🙈`;
+  }
+}
 
 function showCurrentWeather(response) {
   console.log(response.data);
@@ -30,6 +33,8 @@ function showCurrentWeather(response) {
   let skyStatus = response.data.weather[0].description;
   let humidity = response.data.main.humidity;
   let windSpeed = response.data.wind.speed;
+  let city = response.data.name;
+  console.log(city);
 
   if (hours < 10) {
     hours = `0${hours}`;
@@ -38,6 +43,8 @@ function showCurrentWeather(response) {
     minutes = `0${minutes}`;
   }
 
+  let currentCity = document.querySelector("#city");
+  currentCity.innerHTML = city;
   let currentData = document.querySelector("#currently-data");
   currentData.innerHTML = `${day}, ${hours}:${minutes}`;
   let temp = document.querySelector("#temp");
@@ -65,3 +72,21 @@ function showCelsTemp(event) {
   c.classList.add("active");
   f.classList.remove("active");
 }
+
+function search(city) {
+  let apiKey = `e6243f25d4521c7113d909e1adc20730`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showCurrentWeather);
+}
+
+let f = document.querySelector("#fah-temp");
+let c = document.querySelector("#cels-temp");
+f.addEventListener("click", showFahTemp);
+c.addEventListener("click", showCelsTemp);
+
+let celsiusTemperature = null;
+
+let inputForm = document.querySelector("#input-form");
+inputForm.addEventListener("submit", handleSubmit);
+
+search("Kyiv");
