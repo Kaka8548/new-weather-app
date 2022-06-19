@@ -101,3 +101,14 @@ h1 {
   font-family: "Roboto Flex", sans-serif;
   margin-bottom: 10px;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.forecast-max-temp {
+  font-weight: bold;
+}
