@@ -8,9 +8,9 @@ function handleSubmit(event) {
 
     axios.get(apiUrl).then(displayCurrentWeather);
   } else {
-    let currentCity = document.querySelector("#city");
-    currentCity.classList.add("small");
-    currentCity.innerHTML = `You haven't typed anything yet 🙈`;
+    let displayedWeather = document.querySelector("#displayed-weather");
+    displayedWeather.classList.add("small");
+    displayedWeather.innerHTML = `<p style="margin-bottom:0">You haven't typed anything yet 🙈</p><img src="./img/cat.png" alt="cat" style="width:45%"/>`;
   }
 }
 

@@ -97,9 +97,12 @@ h1 {
 }
 
 .small {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Roboto Flex", sans-serif;
-  margin-bottom: 10px;
+  height: 246.354px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .forecast {

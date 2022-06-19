@@ -40,37 +40,39 @@
           </div>
         </form>
 
-        <div class="row text">
-          <div class="col-3">
-            <img src="" alt="sunny" id="icon" />
+        <div id="displayed-weather">
+          <div class="row text">
+            <div class="col-3">
+              <img src="" alt="sunny" id="icon" />
+            </div>
+
+            <div class="col-5">
+              <ul>
+                <li><h1 id="city">Kyiv</h1></li>
+                <li id="currently-data"></li>
+
+                <li>
+                  <span id="temp">23</span>
+                  <a href="#" id="cels-temp" class="active">C°</a>|<a
+                    href="#"
+                    id="fah-temp"
+                    >F°</a
+                  >
+                </li>
+                <li id="status">Clear sky</li>
+              </ul>
+            </div>
+
+            <div class="col-4">
+              <ul class="right-col">
+                <li id="hum"></li>
+                <li id="wind"></li>
+              </ul>
+            </div>
           </div>
 
-          <div class="col-5">
-            <ul>
-              <li><h1 id="city">Kyiv</h1></li>
-              <li id="currently-data"></li>
-
-              <li>
-                <span id="temp">23</span>
-                <a href="#" id="cels-temp" class="active">C°</a>|<a
-                  href="#"
-                  id="fah-temp"
-                  >F°</a
-                >
-              </li>
-              <li id="status">Clear sky</li>
-            </ul>
-          </div>
-
-          <div class="col-4">
-            <ul class="right-col">
-              <li id="hum"></li>
-              <li id="wind"></li>
-            </ul>
-          </div>
+          <div class="forecast" id="forecast"></div>
         </div>
-
-        <div class="forecast" id="forecast"></div>
       </div>
 
       <div class="footer">
