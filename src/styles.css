@@ -113,3 +113,8 @@ h1 {
 .forecast-max-temp {
   font-weight: bold;
 }
+
+.footer {
+  margin-top: 5px;
+  font-family: "Roboto Flex", sans-serif;
+}
