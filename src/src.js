@@ -14,6 +14,30 @@ function handleSubmit(event) {
   }
 }
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tomorrow", "Tue", "Wed", "Thu"];
+  let dayForecast = `<div class="row">`;
+
+  days.forEach(function (day) {
+    dayForecast =
+      dayForecast +
+      `<div class="col-2">
+            ${day}
+            <img
+              src="http://openweathermap.org/img/wn/01d@2x.png"
+              alt="sunny"
+            />
+            <span class="forecast-max-temp">18°</span>
+            <span class="forecast-min-temp">12°</span>
+          </div>`;
+  });
+
+  dayForecast = dayForecast + `</div>`;
+  forecastElement.innerHTML = dayForecast;
+}
+
 function showCurrentWeather(response) {
   weekDays = [
     "Sunday",
@@ -60,6 +84,8 @@ function showCurrentWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${iconId}@2x.png`
   );
+
+  showForecast();
 }
 
 function showFahTemp(event) {
