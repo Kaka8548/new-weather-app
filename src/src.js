@@ -103,6 +103,12 @@ function displayCurrentWeather(response) {
     `http://openweathermap.org/img/wn/${iconId}@2x.png`
   );
 
+  let c = document.querySelector("#cels-temp");
+  let f = document.querySelector("#fah-temp");
+
+  c.classList.add("active");
+  f.classList.remove("active");
+
   showForecast(response.data.coord);
 }
 
